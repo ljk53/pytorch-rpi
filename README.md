@@ -16,3 +16,8 @@ The steps to build it include:
    export USE_PYTORCH_QNNPACK=0
    ```
 1. Run `./build_libtorch.sh` to build and pack the zip file.
+
+## Raspberry Pi (32-bit)
+
+1. Install the latest Raspberry Pi OS (32-bit)
+1. Run `LIBTORCH_VARIANT=armv7l-cxx11-abi-shared-without-deps ./build_libtorch.sh`.
