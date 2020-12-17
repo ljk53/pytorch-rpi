@@ -4,8 +4,8 @@ set -xe pipefail
 
 SRC_ROOT="$( cd "$(dirname "$0")" ; pwd -P)"
 PYTORCH_ROOT=${PYTORCH_ROOT:-$SRC_ROOT/pytorch}
-PYTORCH_BUILD_VERSION="1.6.0"
-LIBTORCH_VARIANT="shared-without-deps"
+PYTORCH_BUILD_VERSION="${PYTORCH_BUILD_VERSION:-1.7.1}"
+LIBTORCH_VARIANT="${LIBTORCH_VARIANT:-shared-without-deps}"
 
 if [[ "$LIBTORCH_VARIANT" == *"cxx11-abi"* ]]; then
   export _GLIBCXX_USE_CXX11_ABI=1
