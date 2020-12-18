@@ -19,5 +19,15 @@ The steps to build it include:
 
 ## Raspberry Pi (32-bit)
 
-1. Install the latest Raspberry Pi OS (32-bit)
+1. Install the latest Raspberry Pi OS (32-bit).
+1. Run `sudo apt update && sudo apt upgrade`.
+1. Run `git clone git@github.com:ljk53/pytorch-rpi && cd pytorch-rpi`.
 1. Run `LIBTORCH_VARIANT=armv7l-cxx11-abi-shared-without-deps ./build_libtorch.sh`.
+
+## Raspberry Pi (64-bit)
+
+1. Install the latest 64-bit Ubuntu 20.04 for Raspberry Pi.
+1. Run `sudo apt update && sudo apt upgrade`.
+1. Run `git clone git@github.com:ljk53/pytorch-rpi && cd pytorch-rpi`.
+1. Run `MAX_JOBS=2 LIBTORCH_VARIANT=aarch64-cxx11-abi-shared-without-deps ./build_libtorch.sh`.
+   Note: set the max number of concurrent build jobs to 2 to avoid running out of the RAM.
