@@ -18,7 +18,7 @@ retry () {
 }
 
 install_deps() {
-  sudo apt install -y build-essential cmake ninja-build zip
+  sudo apt install -y build-essential cmake ninja-build python3 python3-pip zip
   sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 100
   sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 100
 }
