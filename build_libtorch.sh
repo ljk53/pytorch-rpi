@@ -4,7 +4,7 @@ set -xe pipefail
 
 SRC_ROOT="$( cd "$(dirname "$0")" ; pwd -P)"
 PYTORCH_ROOT=${PYTORCH_ROOT:-$SRC_ROOT/pytorch}
-PYTORCH_BUILD_VERSION="${PYTORCH_BUILD_VERSION:-1.8.1}"
+PYTORCH_BUILD_VERSION="${PYTORCH_BUILD_VERSION:-1.9.0}"
 LIBTORCH_VARIANT="${LIBTORCH_VARIANT:-shared-without-deps}"
 
 if [[ "$LIBTORCH_VARIANT" == *"cxx11-abi"* ]]; then
